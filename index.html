@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <!-- stylesheets -->
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Fredericka+the+Great&family=Roboto:wght@300&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/5c8009c014.js" crossorigin="anonymous"></script>
+    <!-- external stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+
+    <title>Caitlin Klotz - Project 1</title>
+</head>
+<body>
+    <header>
+        <div class="wrapper clearfix">
+            <!-- Hamburger Menu Icon -->
+            <label for="menuToggle"><i class="fas fa-bars slideMenu"></i></label>
+            <input type="checkbox" name="menu" id="menuToggle" class="menuToggle">
+            <nav class="menuNav">
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+            <h1>Animal Refuge</h1>
+        </div>
+
+        <!-- Font Awesome Social Media Icons -->
+        <div class="socialMedia clearfix">
+            <!-- instagram -->
+            <i class="fab fa-instagram instagram"></i>
+            <!-- facebook -->
+            <i class="fab fa-facebook-f facebook"></i>
+            <!-- snapchat -->
+            <i class="fab fa-snapchat-ghost snapchat"></i>
+            <!-- twitter -->
+            <i class="fab fa-twitter twitter"></i>
+        </div>
+    </header>
+
+    <main>
+        <!-- SECTION featured -->
+        <section class="featured">
+            <div class="wrapper clearfix">
+                <figure>
+                    <img src="./animal-land-assets/image-6.jpg" alt="Our cat Suzie lying down on the couch">
+                </figure>
+    
+                <div class="featuredText">
+                    <h2>Suzie's Story</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit nihil consequuntur, assumenda, sint minima, fugit in fugiat explicabo aliquam vero hic perspiciatis. Totam quas tempora nobis voluptate! Eos, in dicta mollitia officiis fugit aspernatur neque, dolores repudiandae rerum inventore cumque nihil molestias hic et quaerat itaque? Sunt quae dolor magnam ratione dolores deleniti sit voluptatum? Maxime, eos? Iure dicta dolor labore, possimus iusto beatae ipsum voluptatem ex dolore voluptas, qui veritatis odio neque cum tenetur.</p>
+                    <a href="#">Read More</a>
+                </div>
+            </div>
+        </section>
+        <!-- !SECTION featured -->
+    
+        <!-- SECTION friends -->
+        <section class="friends">
+            <h2>Some of Our Friends</h2>
+    
+            <!-- images -->
+            <ul class="wrapper clearfix">
+                <li>
+                    <img src="./animal-land-assets/image-5.jpg" alt="Green Crested Basilisk resting on a branch">
+                </li>
+                <li>
+                    <img src="./animal-land-assets/image-4.jpg" alt="Sheep staring at the camera">
+                </li>
+                <li>
+                    <img src="./animal-land-assets/image-3.jpg" alt="Macaw eating a cookie while perched on a branch">
+                </li>
+            </ul>
+    
+        </section>
+        <!-- !SECTION friends -->
+    
+        <!-- SECTION store/event links -->
+        <section class="events">
+            <div class="wrapper clearfix">
+                <div class="icon">
+                    <!-- PAW ICON -->
+                    <i class="fas fa-paw"></i>
+                    <h3 class="spotlight">Animal Spotlight</h3>
+                </div>
+        
+                <div class="icon">
+                    <!-- CALENDAR ICON -->
+                    <i class="fas fa-calendar-check"></i>
+                    <h3 class="eventsMerch">Events</h3>
+                </div>
+        
+                <div class="icon">
+                    <!-- BAG ICON -->
+                    <i class="fas fa-shopping-bag"></i>
+                    <h3 class="eventsMerch">Merch</h3>
+                </div>
+            </div>
+        </section>
+        <!-- !SECTION store/event links -->
+    
+    
+        <!-- SECTION blog posts -->
+        <section class="blog">
+            <!-- card 1: fascinating facts -->
+            <div class="wrapper">
+                <div class="card card1">
+                    <h2>Fascinating Facts About Zebras</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor modi, tenetur repudiandae fugit vero ipsa, aut magni aspernatur sed mollitia omnis debitis suscipit quaerat consectetur.</p>
+                    <a href="#">Read More</a>
+                </div>
+            </div>
+    
+            <!-- card 2: zebra image -->
+            <figure class="card card2"><img src="./animal-land-assets/image-7.jpg" alt="Two zebras standing together facing opposite directions"></figure>
+    
+            <!-- card 3: cat paw to human hand image -->
+            <figure class="card card3"><img src="./animal-land-assets/image-2.jpg" alt="Cat lying on back with paw touching human hand"></figure>
+    
+            <!-- card 4: the bond -->
+            <div class="wrapper">
+                <div class="card card4">
+                    <h2>The Bond Between Animals and Humans</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor modi, tenetur repudiandae fugit vero ipsa, aut magni aspernatur sed mollitia omnis debitis suscipit quaerat consectetur.</p>
+                    <a href="#">Read More</a>
+                </div>
+            </div>
+        </section>
+        <!-- !SECTION blog posts -->
+    
+        <!-- SECTION contact info -->
+        <section class="contactInfo">
+            <div class="wrapper clearfix">
+                <nav>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </nav>
+        
+                <form action="POST">
+                    <h3>Stay Updated</h3>
+                    <p>Subscribe to our newsletter to stay updated.</p>
+                    <label for="emailAddress" class="sr-only">Email Address:</label>
+                    <input type="email" name="emailAddress" id="emailAddress" placeholder="email address">
+                    <button type="submit">Subscribe</button>
+                </form>
+        
+                <div class="contact">
+                    <h3>Contact</h3>
+                    <p>info@email.com | 123-456-7890</p>
+                    <p>123 some road, Toronto, ON</p>
+                    <p>A5A 5A5, Canada</p>
+                </>
+            </div>
+        </section>
+        <!-- !SECTION contact info -->
+    </main>
+
+    <footer>Created at <a href="https://junocollege.com">Juno College</a></footer>
+
+</body>
+</html>
