@@ -6,10 +6,8 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 
 *, *:before, *:after {box-sizing: inherit}
 
-.sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
+.srOnly { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
 /* end of snippet */
-
-/* TODO sr-only MUST match your naming convention or you WILL lose a mark on it */
 
 /* stripping stylings */
 * {
@@ -31,7 +29,7 @@ img {
 }
 
 .wrapper {
-    width: 85%;
+    width: 90%;
     max-width: 1400px;
     margin: 0 auto;
 }
@@ -193,9 +191,8 @@ header {
 
 .slideMenu {
     font-size: 5rem;
-    position: absolute;
-    top: 15px;
-    right: 20px;
+    top: 20px;
+    right: 45px;
     visibility: hidden;
 }
 
@@ -272,7 +269,7 @@ main a {
 /* SECTION friends */
 .friends h2 {
     text-align: center;
-    width: 33%;
+    width: 40%;
     margin: 0 auto 80px;
 }
 
@@ -290,9 +287,7 @@ main a {
 /* SECTION store/event links */
 .icon {
     text-align: center;
-    width: 200px;
-    margin-left: 100px;
-    margin-right: 100px;
+    width: calc(100%/3);
     float: left;
     cursor: pointer;
 }
@@ -335,10 +330,6 @@ main a {
 
 .card4 {
     padding-left: 100px;
-}
-
-.card1 h2 {
-    width: 75%;
 }
 /* !SECTION blog posts */
 
@@ -453,7 +444,47 @@ footer {
     /* TODO put icons in the sliding nav */
     header {
         /* tiger's face should be near the left edge of the screen */
+        /* REVIEW positioning changes with screen HEIGHT; make sure not to lose tirger's face! */
         background-position: -470px;
     }
+
+    h1 {
+        /* change the position and font-size */
+        float: none;
+        font-size: 7rem;
+        line-height: 70px;
+        text-align: left;
+        margin: 0;
+        padding: 10px;
+    }
+
+    /* featured section: resize figure and .featuredText containers */
+
+    .featured figure {
+        width: calc(50% - 30px);
+    }
+
+    .featuredText {
+        width: 50%;
+    }
+
+    /* friends section: keep the h2 positioning the same by changing the width */
+
+    .friends h2 {
+        /* NOTE this width breaks at 810px */
+        width: 45%;
+    }
+
+    /* blog section: decrease .card1 and .card4 top margin */
+
 }
+
+    /* featured section: featured image should be on top of the featuredText div and is the full width of the screen, "Read More" anchor is now centred */
+
+    /* friends section: image of macaw disappears, change sizing */
+
+    /* store/event links section: .icon divs are stacked on top of each other */
+
+    /* blog section: image cards should be above their respective text cards at full width of the screen */
+
 /* !SECTION media queries */
