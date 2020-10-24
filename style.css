@@ -108,7 +108,7 @@ h2 {
     font-weight: 400;
 }
 
-p,
+main p,
 footer {
     font-size: 2rem;
 }
@@ -168,7 +168,7 @@ footer {
 }
 
 .contactInfo form button {
-    border: 0.5px solid #000000;
+    border: 1.5px solid #000000;
 }
 
 footer a {
@@ -194,6 +194,7 @@ header {
     top: 20px;
     right: 45px;
     visibility: hidden;
+    /* apply text shadow so the hamburger remains visibile over the blog section */
 }
 
 .menuToggle {
@@ -321,7 +322,7 @@ main a {
 }
 
 .card1, .card4 {
-    margin-top: 125px;
+    margin-top: 6.5vw;
 }
 
 .card1 {
@@ -380,7 +381,7 @@ main a {
     display: block;
     float: left;
     width: 25%;
-    padding: 15px 30px;
+    padding: 15px 0;
     cursor: pointer;
 }
 
@@ -398,6 +399,23 @@ footer {
 /* !SECTION footer */
 
 /* SECTION media queries */
+@media (max-width: 1180px) {
+    /* change font size of elements in blog cards so they don't increase in height */
+    .blog h2 {
+        font-size: 2.8rem;
+    }
+
+    .blog p {
+        font-size: 1.6rem;
+    }
+
+    .blog a {
+        font-size: 1.5rem;
+        padding: 10px 30px;
+        margin-top: 15px;
+    }
+}
+
 @media (max-width: 1000px) {
     /* show hamburger menu and keep it visible on the screen when the user scrolls down */
     .slideMenu {
@@ -443,8 +461,8 @@ footer {
     /* header styles: change position of background-imge, h1 should be in the top left of the screen, hide icons */
     /* TODO put icons in the sliding nav */
     header {
-        /* tiger's face should be near the left edge of the screen */
-        /* REVIEW positioning changes with screen HEIGHT; make sure not to lose tirger's face! */
+        /* TODO tiger's face should be near the left edge of the screen */
+        /* REVIEW positioning changes with screen HEIGHT; make sure not to lose tiger's face! */
         background-position: -470px;
     }
 
@@ -475,8 +493,45 @@ footer {
         width: 45%;
     }
 
-    /* blog section: decrease .card1 and .card4 top margin */
+    /* blog section: decrease centre padding on text cards, paragraph line height, top margin, h2 font size */
+        /* NOTE the card height breaks at 810px */
+    .card1, .card4 {
+        margin-top: 6vw;
+    }
+    
+    .card1 {
+        padding-right: 50px;
+    }
 
+    .card4 {
+        padding-left: 50px;
+    }
+
+    .blog h2 {
+        font-size: 2.3rem;
+    }
+
+    .blog p {
+        line-height: 25px;
+    }
+
+    .blog a {
+        margin-top: 5px;
+    }
+
+    /* contact info section: decrease .contactInfo paragraph font size, change ratio for form textfield and button */
+        /* NOTE revisit sizing at breakpoint 810px */
+    .contactInfo form input {
+        width: 70%;
+    }
+
+    .contactInfo form button {
+        width: 30%;
+    }
+
+    .contactInfo p {
+        font-size: 1.4rem;
+    }
 }
 
     /* featured section: featured image should be on top of the featuredText div and is the full width of the screen, "Read More" anchor is now centred */
@@ -485,6 +540,8 @@ footer {
 
     /* store/event links section: .icon divs are stacked on top of each other */
 
-    /* blog section: image cards should be above their respective text cards at full width of the screen */
+    /* blog section: image cards should be above their respective text cards at full width of the screen, anchor tags are centred */
+
+    /* contact section: float left nav horizontally above contact form, subscribe button underneath textfield (same width and height, about 10px margin), contact info centre aligned */
 
 /* !SECTION media queries */
