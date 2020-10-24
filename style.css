@@ -185,6 +185,7 @@ footer a:focus {
 header {
     background-image: url(./animal-land-assets/image-1.jpg);
     background-size: cover;
+    background-position: 30%;
     height: 90vh;
     position: relative;
 }
@@ -194,7 +195,7 @@ header {
     top: 20px;
     right: 45px;
     visibility: hidden;
-    /* apply text shadow so the hamburger remains visibile over the blog section */
+    text-shadow: 1px 1px 1px #152d20;
 }
 
 .menuToggle {
@@ -210,6 +211,11 @@ header {
     text-align: center;
     padding: 10px 15px;
     float: left;
+}
+
+/* hide social media in navbar until it becomes a sliding menu at 1000px */
+.smallMedia {
+    visibility: hidden;
 }
 
 h1 {
@@ -321,11 +327,20 @@ main a {
     float: left;
 }
 
-.card1, .card4 {
-    margin-top: 6.5vw;
+.card1 {
+    float: right;
 }
 
-.card1 {
+.card2, .card4 {
+    padding-top: 6.5vw;
+    /* 
+        define a height so that the text cards will be the same height as the image cards
+        the aspect ratio for the image is roughly 4:3
+    */
+    height: calc((3 * 50vw)/4);
+}
+
+.card2 {
     padding-right: 100px;
 }
 
@@ -359,7 +374,6 @@ main a {
 }
 
 .contactInfo nav a {
-    text-align: center;
     padding: 0;
     margin: 0;
 }
@@ -421,6 +435,7 @@ footer {
     .slideMenu {
         visibility: visible;
         position: fixed;
+        z-index: 10;
     }
 
     /* change .menuNav to vertical layout and have it slide in and out when the user clicks on the hamburger menu */
@@ -444,28 +459,50 @@ footer {
         float: none;
         display: block;
         text-align: left;
-        padding: 20px 30px;
-        transition: all 0.5s ease-in-out;
     }
-
+    
     .menuNav a:hover,
     .menuNav a:focus {
         background: #c3d3cb;
         color: #152d20;
     }
-
+    
     .menuToggle:checked + .menuNav {
         left: 0;
     }
-
-    /* header styles: change position of background-imge, h1 should be in the top left of the screen, hide icons */
-    /* TODO put icons in the sliding nav */
-    header {
-        /* TODO tiger's face should be near the left edge of the screen */
-        /* REVIEW positioning changes with screen HEIGHT; make sure not to lose tiger's face! */
-        background-position: -470px;
+    
+        /* change visibility of .smallMedia and style */
+    .smallMedia {
+        visibility: visible;
+        font-size: 2.5rem;
     }
 
+        /* keep icon divs beside eachother until nav container is too narrow; this will also prevent the imbalance of having one icon underneath three */
+    .topIcons,
+    .bottomIcons {
+        float: left;
+        text-align: center;
+        width: 180px;
+    }
+
+    .smallMedia i {
+        display: block;
+        float: left;
+        width: 90px;
+    }
+    
+    .menuNav a,
+    .smallMedia i {
+        padding: 20px 30px;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .smallMedia i:hover {
+        background: #c3d3cb;
+        color: #152d20;
+    }
+
+    /* header section: h1 should be in the top left of the screen, hide icons */
     h1 {
         /* change the position and font-size */
         float: none;
@@ -474,6 +511,10 @@ footer {
         text-align: left;
         margin: 0;
         padding: 10px;
+    }
+
+    .socialMedia {
+        visibility: hidden;
     }
 
     /* featured section: resize figure and .featuredText containers */
@@ -489,17 +530,12 @@ footer {
     /* friends section: keep the h2 positioning the same by changing the width */
 
     .friends h2 {
-        /* NOTE this width breaks at 810px */
         width: 45%;
     }
 
     /* blog section: decrease centre padding on text cards, paragraph line height, top margin, h2 font size */
-        /* NOTE the card height breaks at 810px */
-    .card1, .card4 {
-        margin-top: 6vw;
-    }
     
-    .card1 {
+    .card2 {
         padding-right: 50px;
     }
 
@@ -516,11 +552,10 @@ footer {
     }
 
     .blog a {
-        margin-top: 5px;
+        margin-top: 0;
     }
 
     /* contact info section: decrease .contactInfo paragraph font size, change ratio for form textfield and button */
-        /* NOTE revisit sizing at breakpoint 810px */
     .contactInfo form input {
         width: 70%;
     }
@@ -534,14 +569,202 @@ footer {
     }
 }
 
+@media (max-width: 810px) {
     /* featured section: featured image should be on top of the featuredText div and is the full width of the screen, "Read More" anchor is now centred */
+    .featured figure {
+        float: none;
+        width: 60%;
+        margin: 0 auto;
+    }
+    
+    .featuredText {
+        width: 100%;
+    }
 
-    /* friends section: image of macaw disappears, change sizing */
+    .featuredText h2 {
+        margin-top: 50px; 
+    }
+
+    .featuredText .centredAnchor {
+        text-align: center;
+    }
+
+    /* friends section: keep the h2 positioning the same by changing the width */
+
+    .friends h2 {
+        /* NOTE breaks at 560px */
+        width: 60%;
+        font-size: 4.5rem;
+        margin-bottom: 40px;
+    }
+        /* NOTE third image should also disappear at 560px */
+
+    /* store/event links section: decrease h3 font size */
+    .events h3 {
+        font-size: 2.8rem;
+    }
+
+    /* blog section: image cards should be above their respective text cards at full width of the screen, anchor tags are centred, increase margin around anchor tags */
+
+    .blog figure {
+        height: calc(100vw/2);
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+    }
+
+    .blog figure img {
+        position: absolute;
+        top: -95px;
+    }
+
+    .blog a {
+        margin: 20px 0;
+    }
+
+    .card2, .card4 {
+        text-align: center;
+        width: 100%;
+        height: auto;
+        padding: 6vw 0;
+    }
+    
+    /* contact info section: float left nav horizontally above contact form, subscribe button underneath textfield (same width and height, about 10px margin), contact info centre aligned */
+
+    .contactInfo {
+        padding: 20px 0 40px;
+    }
+
+    .contactInfo nav,
+    .contactInfo form,
+    .contact {
+        float: none;
+        width: 100%;
+    }
+
+    .contactInfo nav a {
+        float: left;
+        width: 25%;
+        padding: 20px 0;
+    }
+    
+    .contactInfo form {
+        clear: both;
+        margin-top: 10px;
+    }
+    
+    .contactInfo form input,
+    .contactInfo form button {
+        float: none;
+        width: 75%;
+        margin: 5px 0;
+        display: inline-block;
+    }
+    
+    .contact {
+        text-align: center;
+        margin-top: 40px;
+    }
+
+    footer {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 560px) {
+    /* sliding menu: increase nevigation width, decrease hamburger size */
+    .menuNav {
+        width: 70%;
+        left: -70%;
+    }
+
+    .slideMenu {
+        font-size: 4rem;
+        right: 25px;
+    }
+
+    /* header section: decrease h1 font size */
+    h1 {
+        font-size: 3rem;
+        line-height: 30px;
+    }
+    
+    /* main sections: decrease top and bottom section padding */
+    
+    main section {
+        padding: 40px 0;
+    }
+
+    /* featured section: resize figure, decrease h2 and p font sizes */
+
+    .featured figure {
+        width: 100%;
+    }
+
+    .featuredText h2 {
+        font-size: 3rem;
+    }
+
+    .featuredText p {
+        font-size: 1.6rem;
+    }
+    
+    /* friends section: image of macaw disappears, change sizing of images and h2 */
+    
+    .friends h2 {
+        font-size: 3.2rem;
+        width: 100%;
+    }
+
+    .friends li {
+        margin-right: 10px;
+        width: calc((100% - 10px)/2);
+    }
+
+    .friends li:nth-child(2) {
+        margin-right: 0;
+    }
+
+    .friends li:last-child {
+        display: none;
+    }
 
     /* store/event links section: .icon divs are stacked on top of each other */
 
-    /* blog section: image cards should be above their respective text cards at full width of the screen, anchor tags are centred */
+    .events {
+        padding: 0;
+    }
 
-    /* contact section: float left nav horizontally above contact form, subscribe button underneath textfield (same width and height, about 10px margin), contact info centre aligned */
+    .icon {
+        float: none;
+        width: 53%;
+        padding: 40px 0;
+        margin: 0 auto;
+    }
 
+    /* blog section: fix image positioning, more margin around text cards */
+
+    .blog figure {
+        height: calc((3 * 100vw)/5);
+    }
+
+    .blog figure img {
+        top: -50px;
+    }
+
+    .card2, .card4 {
+        margin-top: 20px;
+    }
+
+    /* contact info section: decrease nav font size, increase form input and button to full width */
+
+    .contactInfo nav a {
+        font-size: 1.5rem;
+    }
+
+    .contactInfo form input,
+    .contactInfo form button {
+        width: 100%;
+    }
+}
 /* !SECTION media queries */

@@ -31,11 +31,28 @@
                     <li><a href="#">Blog</a></li>
                     <li><a href="#">Contact</a></li>
                 </ul>
+                <!-- Font Awesome Social Media Icons -->
+                <!-- these icons will be seen on screens 1000px and smaller -->
+                <div class="smallMedia clearfix">
+                    <div class="topIcons">
+                        <!-- instagram -->
+                        <i class="fab fa-instagram instagram"></i>
+                        <!-- facebook -->
+                        <i class="fab fa-facebook-f facebook"></i>
+                    </div>
+                    <div class="bottomIcons">
+                        <!-- snapchat -->
+                        <i class="fab fa-snapchat-ghost snapchat"></i>
+                        <!-- twitter -->
+                        <i class="fab fa-twitter twitter"></i>
+                    </div>
+                </div>
             </nav>
             <h1>Animal Refuge</h1>
         </div>
 
         <!-- Font Awesome Social Media Icons -->
+        <!-- these icons will be seen on screens larger than 1000px -->
         <div class="socialMedia clearfix">
             <!-- instagram -->
             <i class="fab fa-instagram instagram"></i>
@@ -59,7 +76,10 @@
                 <div class="featuredText">
                     <h2>Suzie's Story</h2>
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Impedit nihil consequuntur, assumenda, sint minima, fugit in fugiat explicabo aliquam vero hic perspiciatis. Totam quas tempora nobis voluptate! Eos, in dicta mollitia officiis fugit aspernatur neque, dolores repudiandae rerum inventore cumque nihil molestias hic et quaerat itaque? Sunt quae dolor magnam ratione dolores deleniti sit voluptatum? Maxime, eos? Iure dicta dolor labore, possimus iusto beatae ipsum voluptatem ex dolore voluptas, qui veritatis odio neque cum tenetur.</p>
-                    <a href="#">Read More</a>
+                    <!-- div to centre the anchor tag at 810px -->
+                    <div class="centredAnchor">
+                        <a href="#">Read More</a>
+                    </div>
                 </div>
             </div>
         </section>
@@ -112,18 +132,18 @@
     
         <!-- SECTION blog posts -->
         <section class="blog">
-            <!-- card 1: fascinating facts -->
+            <!-- card 1: zebra image -->
+            <figure class="card card1"><img src="./animal-land-assets/image-7.jpg" alt="Two zebras standing together facing opposite directions"></figure>
+
+            <!-- card 2: fascinating facts -->
             <div class="wrapper">
-                <div class="card card1">
+                <div class="card card2">
                     <h2>Fascinating Facts About Zebras</h2>
                     <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor modi, tenetur repudiandae fugit vero ipsa, aut magni aspernatur sed mollitia omnis debitis suscipit quaerat consectetur.</p>
                     <a href="#">Read More</a>
                 </div>
             </div>
-    
-            <!-- card 2: zebra image -->
-            <figure class="card card2"><img src="./animal-land-assets/image-7.jpg" alt="Two zebras standing together facing opposite directions"></figure>
-    
+            
             <!-- card 3: cat paw to human hand image -->
             <figure class="card card3"><img src="./animal-land-assets/image-2.jpg" alt="Cat lying on back with paw touching human hand"></figure>
     
@@ -141,11 +161,11 @@
         <!-- SECTION contact info -->
         <section class="contactInfo">
             <div class="wrapper clearfix">
-                <nav>
+                <nav class="clearfix">
                     <ul>
                         <li><a href="#">Home</a></li>
-                        <li><a href="#">Blog</a></li>
                         <li><a href="#">About</a></li>
+                        <li><a href="#">Blog</a></li>
                         <li><a href="#">Contact</a></li>
                     </ul>
                 </nav>
