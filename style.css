@@ -213,7 +213,7 @@ header {
     float: left;
 }
 
-/* hide social media in navbar until it becomes a sliding menu at 1000px */
+    /* hide social media in navbar until it becomes a sliding menu at 1000px */
 .smallMedia {
     visibility: hidden;
 }
@@ -319,7 +319,6 @@ main a {
 
 .blog figure {
     font-size: 0px;
-    /* NOTE there is still some whitespace above .card2 */
 }
 
 .card {
@@ -448,7 +447,6 @@ footer {
         top: 0;
         left: -50%;
         transition: all 1s;
-        /* z-index? */
     }
 
     .menuNav li {
@@ -471,13 +469,13 @@ footer {
         left: 0;
     }
     
-        /* change visibility of .smallMedia and style */
+    /* change visibility of .smallMedia and style */
     .smallMedia {
         visibility: visible;
         font-size: 2.5rem;
     }
 
-        /* keep icon divs beside eachother until nav container is too narrow; this will also prevent the imbalance of having one icon underneath three */
+    /* keep icon divs beside each other until nav container is too narrow; this will also prevent the imbalance of having one icon underneath three */
     .topIcons,
     .bottomIcons {
         float: left;
@@ -518,7 +516,6 @@ footer {
     }
 
     /* featured section: resize figure and .featuredText containers */
-
     .featured figure {
         width: calc(50% - 30px);
     }
@@ -528,13 +525,11 @@ footer {
     }
 
     /* friends section: keep the h2 positioning the same by changing the width */
-
     .friends h2 {
         width: 45%;
     }
 
     /* blog section: decrease centre padding on text cards, paragraph line height, top margin, h2 font size */
-    
     .card2 {
         padding-right: 50px;
     }
@@ -590,7 +585,6 @@ footer {
     }
 
     /* friends section: keep the h2 positioning the same by changing the width */
-
     .friends h2 {
         /* NOTE breaks at 560px */
         width: 60%;
@@ -605,7 +599,6 @@ footer {
     }
 
     /* blog section: image cards should be above their respective text cards at full width of the screen, anchor tags are centred, increase margin around anchor tags */
-
     .blog figure {
         height: calc(100vw/2);
         overflow: hidden;
@@ -630,7 +623,6 @@ footer {
     }
     
     /* contact info section: float left nav horizontally above contact form, subscribe button underneath textfield (same width and height, about 10px margin), contact info centre aligned */
-
     .contactInfo {
         padding: 20px 0 40px;
     }
@@ -690,13 +682,11 @@ footer {
     }
     
     /* main sections: decrease top and bottom section padding */
-    
     main section {
         padding: 40px 0;
     }
 
     /* featured section: resize figure, decrease h2 and p font sizes */
-
     .featured figure {
         width: 100%;
     }
@@ -710,7 +700,6 @@ footer {
     }
     
     /* friends section: image of macaw disappears, change sizing of images and h2 */
-    
     .friends h2 {
         font-size: 3.2rem;
         width: 100%;
@@ -730,7 +719,6 @@ footer {
     }
 
     /* store/event links section: .icon divs are stacked on top of each other */
-
     .events {
         padding: 0;
     }
@@ -743,7 +731,6 @@ footer {
     }
 
     /* blog section: fix image positioning, more margin around text cards */
-
     .blog figure {
         height: calc((3 * 100vw)/5);
     }
@@ -757,7 +744,6 @@ footer {
     }
 
     /* contact info section: decrease nav font size, increase form input and button to full width */
-
     .contactInfo nav a {
         font-size: 1.5rem;
     }
