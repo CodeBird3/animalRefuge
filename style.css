@@ -663,7 +663,7 @@ footer {
 }
 
 @media (max-width: 560px) {
-    /* sliding menu: increase nevigation width, decrease hamburger size */
+    /* sliding menu: increase navigation width, decrease hamburger size */
     .menuNav {
         width: 70%;
         left: -70%;
